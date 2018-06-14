@@ -176,7 +176,7 @@ document.getElementById(id).style.display = 'none';
       <span class="mdl-layout-title">Lint Report: 4 errors</span>
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation mdl-layout--large-screen-only">
-Check performed at Thu Jun 14 10:41:17 PDT 2018      </nav>
+Check performed at Thu Jun 14 10:57:18 PDT 2018      </nav>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -234,7 +234,7 @@ Dismiss</button>            </div>
 <span class="lineno">  2 </span><span class="tag">&lt;manifest</span><span class="attribute"> </span><span class="prefix">xmlns:</span><span class="attribute">android</span>=<span class="value">"http://schemas.android.com/apk/res/android"</span>
 <span class="lineno">  3 </span>    <span class="attribute">package</span>=<span class="value">"com.jonamireh.lintkotlinsynthetics"</span>>
 <span class="lineno">  4 </span>
-<span class="caretline"><span class="lineno">  5 </span>    <span class="error"><span class="tag">&lt;application</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
+<span class="caretline"><span class="lineno">  5 </span>    <span class="tag">&lt;</span><span class="error"><span class="tag">application</span></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="attribute">
 </span><span class="lineno">  6 </span><span class="attribute">        </span><span class="prefix">android:</span><span class="attribute">allowBackup</span>=<span class="value">"true"</span>
 <span class="lineno">  7 </span>        <span class="prefix">android:</span><span class="attribute">icon</span>=<span class="value">"@mipmap/ic_launcher"</span>
 <span class="lineno">  8 </span>        <span class="prefix">android:</span><span class="attribute">label</span>=<span class="value">"@string/app_name"</span></pre>
@@ -309,7 +309,11 @@ Dismiss</button>            </div>
 
 </div>
 <div class="metadata"><div class="explanation" id="explanationUnusedIds" style="display: none;">
-This resource id definition appears not to be needed since it is not referenced from anywhere. Having id definitions, even if unused, is not necessarily a bad idea since they make working on layouts and menus easier, so there is not a strong reason to delete these.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
+This resource id definition appears not to be needed since it is not referenced from anywhere. Having id definitions, even if unused, is not necessarily a bad idea since they make working on layouts and menus easier, so there is not a strong reason to delete these.<br/>
+<br/>
+The unused resource check can ignore tests. If you want to include resources that are only referenced from tests, consider packaging them in a test source set instead.<br/>
+<br/>
+You can include test sources in the unused resource check by setting the system property lint.unused-resources.include-tests=true, and to exclude them (usually for performance reasons), use lint.unused-resources.exclude-tests=true.<br/>Note: This issue has an associated quickfix operation in Android Studio and IntelliJ IDEA.<br>
 To suppress this error, use the issue id "UnusedIds" as explained in the <a href="#SuppressInfo">Suppressing Warnings and Errors</a> section.<br/>
 <br/></div>
 </div>
